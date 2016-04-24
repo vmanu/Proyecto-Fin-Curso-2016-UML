@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DesktopApp">
+  <ClassDiagramComponents>
+    <Class name="Constantes" package="constantes" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="ID_BOTON_PLAY_MENU_PRINCIPAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_PLAY_ONLINE_MENU_PRINCIPAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_RULES_MENU_PRINCIPAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_RULES_GRAPHICALLY_MENU_PRINCIPAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_DEVELOPERS_MENU_PRINCIPAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_PLAY_MENU_JUEGO_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_SCORES_MENU_JUEGO_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_BACKUP_MENU_JUEGO_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_BACK_MENU_JUEGO_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_BACK_MENU_JUEGO_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_SCORES_MENU_JUEGO_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_PLAY_MENU_JUEGO_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_BACK_OPCIONES_MENU_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_RANDOMLY_OPCIONES_MENU_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_PLAY_OPCIONES_MENU_ONLINE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_BACK_OPCIONES_MENU_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_BOTON_PLAY_OPCIONES_MENU_NORMAL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_GAME_OF_3" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_GAME_OF_5" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_GAME_OF_9" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_ROUND_OF_1" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_ROUND_OF_3" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_ROUND_OF_5" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_ROUND_CUSTOMIZED" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_1_PLAYERS" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="ID_RADIOBUTTON_2_PLAYERS" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="DataContainer" package="modelo" visibility="public" xPosition="445.0" yPosition="20.0">
+      <Fields>
+        <Field name="roundsCounter" type="int" visibility="private"/>
+        <Field name="roundsLimit" type="int" visibility="private"/>
+        <Field name="victoriesP1" type="int" visibility="private"/>
+        <Field name="victoriesP2" type="int" visibility="private"/>
+        <Field name="turno" type="boolean" visibility="private"/>
+        <Field name="modalidadJuego" type="int" visibility="private"/>
+        <Field name="chosen1" type="Enum" visibility="private"/>
+        <Field name="chosen2" type="Enum" visibility="private"/>
+        <Field name="factorAlgoritmo" type="int" visibility="private"/>
+        <Field name="idImagenPulsada1" type="String" visibility="private"/>
+        <Field name="idImagenPulsada2" type="String" visibility="private"/>
+        <Field name="nombreJ1" type="String" visibility="private"/>
+        <Field name="nombreJ2" type="String" visibility="private"/>
+        <Field name="jugando" type="boolean" visibility="private"/>
+        <Field name="mapFichas" type="HashMap&lt;String, Enum&gt;" visibility="private"/>
+        <Field name="mapFichasMaquina" type="HashMap&lt;String, String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getRoundsCounter" returnType="int" visibility="public"/>
+        <Method name="setRoundsCounter" returnType="void" visibility="public">
+          <Argument type="int" name="roundsCounter"/>
+        </Method>
+        <Method name="getRoundsLimit" returnType="int" visibility="public"/>
+        <Method name="setRoundsLimit" returnType="void" visibility="public">
+          <Argument type="int" name="roundsLimit"/>
+        </Method>
+        <Method name="getVictoriesP1" returnType="int" visibility="public"/>
+        <Method name="setVictoriesP1" returnType="void" visibility="public">
+          <Argument type="int" name="victoriesP1"/>
+        </Method>
+        <Method name="getVictoriesP2" returnType="int" visibility="public"/>
+        <Method name="setVictoriesP2" returnType="void" visibility="public">
+          <Argument type="int" name="victoriesP2"/>
+        </Method>
+        <Method name="isTurno" returnType="boolean" visibility="public"/>
+        <Method name="setTurno" returnType="void" visibility="public">
+          <Argument type="boolean" name="turno"/>
+        </Method>
+        <Method name="getModalidadJuego" returnType="int" visibility="public"/>
+        <Method name="setModalidadJuego" returnType="void" visibility="public">
+          <Argument type="int" name="modalidadJuego"/>
+        </Method>
+        <Method name="getChosen1" returnType="Enum" visibility="public"/>
+        <Method name="setChosen1" returnType="void" visibility="public">
+          <Argument type="Enum" name="chosen1"/>
+        </Method>
+        <Method name="getChosen2" returnType="Enum" visibility="public"/>
+        <Method name="setChosen2" returnType="void" visibility="public">
+          <Argument type="Enum" name="chosen2"/>
+        </Method>
+        <Method name="getFactorAlgoritmo" returnType="int" visibility="public"/>
+        <Method name="setFactorAlgoritmo" returnType="void" visibility="public">
+          <Argument type="int" name="factorAlgoritmo"/>
+        </Method>
+        <Method name="getIdImagenPulsada1" returnType="String" visibility="public"/>
+        <Method name="setIdImagenPulsada1" returnType="void" visibility="public">
+          <Argument type="String" name="idImagenPulsada1"/>
+        </Method>
+        <Method name="getIdImagenPulsada2" returnType="String" visibility="public"/>
+        <Method name="setIdImagenPulsada2" returnType="void" visibility="public">
+          <Argument type="String" name="idImagenPulsada2"/>
+        </Method>
+        <Method name="getNombreJ1" returnType="String" visibility="public"/>
+        <Method name="setNombreJ1" returnType="void" visibility="public">
+          <Argument type="String" name="nombreJ1"/>
+        </Method>
+        <Method name="getNombreJ2" returnType="String" visibility="public"/>
+        <Method name="setNombreJ2" returnType="void" visibility="public">
+          <Argument type="String" name="nombreJ2"/>
+        </Method>
+        <Method name="isJugando" returnType="boolean" visibility="public"/>
+        <Method name="setJugando" returnType="void" visibility="public">
+          <Argument type="boolean" name="jugando"/>
+        </Method>
+        <Method name="getMapFichas" returnType="HashMap&lt;String, Enum&gt;" visibility="public"/>
+        <Method name="getMapFichasMaquina" returnType="HashMap&lt;String, String&gt;" visibility="public"/>
+        <Method name="getCorrectEnum" returnType="Enum" visibility="private">
+          <Argument type="Enum[]" name="values"/>
+          <Argument type="String" name="valorBueno"/>
+        </Method>
+        <Method name="inicializaMapFichas" returnType="void" visibility="private"/>
+        <Method name="inicializaMapFichasMaquina" returnType="void" visibility="private"/>
+        <Method name="inicializaMapImageTagsRojo" returnType="HashMap&lt;String, String&gt;" visibility="private"/>
+        <Method name="inicializaMapImageTagsAzul" returnType="HashMap&lt;String, String&gt;" visibility="private"/>
+        <Method name="cambiaTurno" returnType="void" visibility="public"/>
+        <Method name="sumaVictoriasP1" returnType="void" visibility="public"/>
+        <Method name="sumaVictoriasP2" returnType="void" visibility="public"/>
+        <Method name="getOrdinalChosen1" returnType="int" visibility="public"/>
+        <Method name="getOrdinalChosen2" returnType="int" visibility="public"/>
+        <Method name="avanzaRonda" returnType="void" visibility="public"/>
+        <Method name="rondasFinalizadas" returnType="boolean" visibility="public"/>
+        <Method name="setValoresIniciales" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="modelo" visibility="public" xPosition="815.0" yPosition="20.0">
+      <Fields>
+        <Field name="ganados" type="int" visibility="private"/>
+        <Field name="jugados" type="int" visibility="private"/>
+        <Field name="date" type="Date" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="ganados"/>
+          <Argument type="int" name="jugados"/>
+          <Argument type="Date" name="date"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getGanados" returnType="int" visibility="public"/>
+        <Method name="setGanados" returnType="void" visibility="public">
+          <Argument type="int" name="ganados"/>
+        </Method>
+        <Method name="getJugados" returnType="int" visibility="public"/>
+        <Method name="setJugados" returnType="void" visibility="public">
+          <Argument type="int" name="jugados"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Date" name="date"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ComparadorJugadores" package="utilities" visibility="public" xPosition="20.0" yPosition="724.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="porVictorias" package="utilities" visibility="public" xPosition="1311.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Jugador" name="o1"/>
+          <Argument type="Jugador" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="porJugadas" package="utilities" visibility="public" xPosition="1311.0" yPosition="136.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Jugador" name="o1"/>
+          <Argument type="Jugador" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="porPromedios" package="utilities" visibility="public" xPosition="1311.0" yPosition="267.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="compare" returnType="int" visibility="public">
+          <Argument type="Jugador" name="o1"/>
+          <Argument type="Jugador" name="o2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PreferencesManager" package="utilities" visibility="public" xPosition="1654.0" yPosition="695.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="setPreferencesNormal" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="roundsOption"/>
+          <Argument type="String" name="playerNumber"/>
+          <Argument type="String" name="gameOption"/>
+          <Argument type="String" name="player1Name"/>
+          <Argument type="String" name="player2Name"/>
+          <Argument type="String" name="customRounds"/>
+        </Method>
+        <Method name="getPreferencesNormal" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ObservableList&lt;Node&gt;" name="nodoRound"/>
+          <Argument type="ObservableList&lt;Node&gt;" name="nodoPlayers"/>
+          <Argument type="ObservableList&lt;Node&gt;" name="nodoGame"/>
+          <Argument type="TextField" name="player1"/>
+          <Argument type="TextField" name="player2"/>
+          <Argument type="TextField" name="roundCustomed"/>
+        </Method>
+        <Method name="changeStateRadioButton" returnType="void" visibility="private" isStatic="true">
+          <Argument type="ObservableList&lt;Node&gt;" name="nodos"/>
+          <Argument type="String" name="valueToSet"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UtilidadesJavaFX" package="utilities" visibility="public" xPosition="20.0" yPosition="614.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="DesktopApp" package="vista" visibility="public" xPosition="20.0" yPosition="846.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FXMLController" package="vista" visibility="public" xPosition="886.0" yPosition="401.0">
+      <Fields>
+        <Field name="datos" type="DataContainer" visibility="private" isStatic="true"/>
+        <Field name="RUTA_IMAGENES" type="String" visibility="private" isFinal="true"/>
+        <Field name="cbox" type="ComboBox" visibility="private"/>
+        <Field name="resultJ1" type="Label" visibility="private"/>
+        <Field name="resultJ2" type="Label" visibility="private"/>
+        <Field name="winnerLabel" type="Label" visibility="private"/>
+        <Field name="resultImagenJ1Choosed" type="ImageView" visibility="private"/>
+        <Field name="resultImagenJ2Choosed" type="ImageView" visibility="private"/>
+        <Field name="buttonContinueResult" type="Button" visibility="private"/>
+        <Field name="RadioGroup_Player_Normal" type="VBox" visibility="private"/>
+        <Field name="RadioGroup_Games_Normal" type="VBox" visibility="private"/>
+        <Field name="RadioGroup_Rounds_Normal" type="VBox" visibility="private"/>
+        <Field name="TxtFieldP1" type="TextField" visibility="private"/>
+        <Field name="TxtFieldP2" type="TextField" visibility="private"/>
+        <Field name="NumberRoundsCustom" type="TextField" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="handleButtonsMenuPrincipalAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleButtonBackAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleButtonsMenuNormalAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleButtonsMenuOnlineAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleRadioButtonsAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleButtonsMenuOpcionesJuegoOnlineAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="handleButtonsMenuOpcionesJuegoNormalAction" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="getSelectedRadioButtonID" returnType="String" visibility="public" isStatic="true">
+          <Argument type="ObservableList&lt;Node&gt;" name="lista"/>
+        </Method>
+        <Method name="changeSceneRoot" returnType="void" visibility="private">
+          <Argument type="FXMLLoader" name="loader"/>
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="setVisibilitiesStateMenuOpcionesOnline" returnType="void" visibility="private">
+          <Argument type="Stage" name="stage"/>
+          <Argument type="boolean" name="visibilityButton"/>
+        </Method>
+        <Method name="showAlertFields" returnType="void" visibility="private">
+          <Argument type="ResourceBundle" name="bundle"/>
+          <Argument type="String" name="excepcion"/>
+        </Method>
+        <Method name="notificacionToast" returnType="void" visibility="private">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+        <Method name="cambiaAzul" returnType="void" visibility="private">
+          <Argument type="MouseEvent" name="event"/>
+        </Method>
+        <Method name="getEnumFromOrdinal" returnType="Enum" visibility="private">
+          <Argument type="int" name="ordinal"/>
+          <Argument type="DataContainer" name="datos"/>
+        </Method>
+        <Method name="comunEvaluacionGanador" returnType="void" visibility="private">
+          <Argument type="DataContainer" name="datos"/>
+          <Argument type="boolean" name="online"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+        <Method name="logicaJuego" returnType="int" visibility="private">
+          <Argument type="int" name="chosen"/>
+          <Argument type="DataContainer" name="datos"/>
+        </Method>
+        <Method name="gestionaJuego" returnType="void" visibility="private">
+          <Argument type="MouseEvent" name="event"/>
+        </Method>
+        <Method name="gestionaResultButtons" returnType="void" visibility="private">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="vista.FXMLController" target="utilities.PreferencesManager" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="utilities.porJugadas" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="utilities.porPromedios" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="utilities.porVictorias" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="vista.FXMLController" target="modelo.DataContainer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
