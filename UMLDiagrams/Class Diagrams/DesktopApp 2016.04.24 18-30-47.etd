@@ -34,7 +34,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="DataContainer" package="modelo" visibility="public" xPosition="445.0" yPosition="20.0">
+    <Class name="DataContainer" package="modelo" visibility="public" xPosition="320.0" yPosition="20.0">
       <Fields>
         <Field name="roundsCounter" type="int" visibility="private"/>
         <Field name="roundsLimit" type="int" visibility="private"/>
@@ -133,7 +133,7 @@
         <Method name="setValoresIniciales" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jugador" package="modelo" visibility="public" xPosition="815.0" yPosition="20.0">
+    <Class name="Jugador" package="modelo" visibility="public" xPosition="620.0" yPosition="20.0">
       <Fields>
         <Field name="ganados" type="int" visibility="private"/>
         <Field name="jugados" type="int" visibility="private"/>
@@ -168,12 +168,12 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ComparadorJugadores" package="utilities" visibility="public" xPosition="20.0" yPosition="724.0">
+    <Class name="ComparadorJugadores" package="utilities" visibility="public" xPosition="920.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="porVictorias" package="utilities" visibility="public" xPosition="1311.0" yPosition="20.0">
+    <Class name="porVictorias" package="utilities" visibility="public" xPosition="1220.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -183,7 +183,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="porJugadas" package="utilities" visibility="public" xPosition="1311.0" yPosition="136.0">
+    <Class name="porJugadas" package="utilities" visibility="public" xPosition="1520.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -193,7 +193,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="porPromedios" package="utilities" visibility="public" xPosition="1311.0" yPosition="267.0">
+    <Class name="porPromedios" package="utilities" visibility="public" xPosition="1820.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -203,7 +203,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="PreferencesManager" package="utilities" visibility="public" xPosition="1654.0" yPosition="695.0">
+    <Class name="PreferencesManager" package="utilities" visibility="public" xPosition="2120.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -227,14 +227,24 @@
           <Argument type="ObservableList&lt;Node&gt;" name="nodos"/>
           <Argument type="String" name="valueToSet"/>
         </Method>
+        <Method name="setPreferencesOnline" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="roundsOption"/>
+          <Argument type="String" name="gameOption"/>
+          <Argument type="String" name="player1Name"/>
+        </Method>
+        <Method name="getPreferencesOnline" returnType="void" visibility="public" isStatic="true">
+          <Argument type="ObservableList&lt;Node&gt;" name="nodoRound"/>
+          <Argument type="ObservableList&lt;Node&gt;" name="nodoGame"/>
+          <Argument type="TextField" name="player1"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="UtilidadesJavaFX" package="utilities" visibility="public" xPosition="20.0" yPosition="614.0">
+    <Class name="UtilidadesJavaFX" package="utilities" visibility="public" xPosition="20.0" yPosition="420.0">
       <Fields/>
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="DesktopApp" package="vista" visibility="public" xPosition="20.0" yPosition="846.0">
+    <Class name="DesktopApp" package="vista" visibility="public" xPosition="320.0" yPosition="420.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -246,7 +256,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="FXMLController" package="vista" visibility="public" xPosition="886.0" yPosition="401.0">
+    <Class name="FXMLController" package="vista" visibility="public" xPosition="620.0" yPosition="420.0">
       <Fields>
         <Field name="datos" type="DataContainer" visibility="private" isStatic="true"/>
         <Field name="RUTA_IMAGENES" type="String" visibility="private" isFinal="true"/>
@@ -263,6 +273,9 @@
         <Field name="TxtFieldP1" type="TextField" visibility="private"/>
         <Field name="TxtFieldP2" type="TextField" visibility="private"/>
         <Field name="NumberRoundsCustom" type="TextField" visibility="private"/>
+        <Field name="RadioGroup_Games_Online" type="VBox" visibility="private"/>
+        <Field name="RadioGroup_Rounds_Online" type="VBox" visibility="private"/>
+        <Field name="TxtFieldP1Online" type="TextField" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
@@ -335,10 +348,10 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation name="" source="vista.FXMLController" target="utilities.PreferencesManager" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="utilities.porJugadas" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation name="" source="utilities.porPromedios" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="utilities.porVictorias" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="datos" source="vista.FXMLController" target="modelo.DataContainer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vista.FXMLController" target="modelo.DataContainer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="utilities.porPromedios" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
