@@ -244,7 +244,7 @@
       <Constructors/>
       <Methods/>
     </Class>
-    <Class name="DesktopApp" package="vista" visibility="public" xPosition="320.0" yPosition="420.0">
+    <Class name="DesktopApp" package="vista" visibility="public" xPosition="375.0" yPosition="420.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -348,10 +348,10 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="utilities.porJugadas" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="utilities.porVictorias" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="datos" source="vista.FXMLController" target="modelo.DataContainer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="vista.FXMLController" target="modelo.DataContainer" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="utilities.porPromedios" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="utilities.porVictorias" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="vista.FXMLController" target="modelo.DataContainer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="utilities.porJugadas" target="modelo.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
